@@ -18,6 +18,17 @@ router.get('/', (req, res) => {
   }
 });
 
+router.get('/return', (req, res) => {
+  if (req.isAuthenticated()) {
+    console.log('req.user:', req.user);
+    pool.query(`SELECT * FROM "person";`)
+    .then((results) => { 
+      console.log(results.rows)
+      res.send(results.rows);
+    })
+  }
+})
+
 // Handles POST request with new user data
 // The only thing different from this and every other post we've seen
 // is that the password gets encrypted before being inserted
