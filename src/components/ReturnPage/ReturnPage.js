@@ -30,10 +30,10 @@ class ReturnPage extends Component {
   render() {
     return (
       <div>
-        {JSON.stringify(this.state)}
+        {/* {JSON.stringify(this.state)} */}
         <ul>
             {this.state.return.map(user => {
-                return <li key={user.id}>{user.username}</li>
+                return <li key={user.id}>username: {user.username}, password:{user.password}, clearance level:{user.clearance_level}</li>
             })}
         </ul>
       </div>

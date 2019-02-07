@@ -29,6 +29,10 @@ const Nav = (props) => (
       <Link className="nav-link" to="/about">
         About
       </Link>
+      {/* // nav bar link to return all users. */}
+      <Link className="nav-link" to="/return">
+        Return
+      </Link>
     </div>
   </div>
 );
